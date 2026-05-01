@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Er. P. Ramnath — Cloud Engineer</title>
+<meta name="description" content="Cloud Engineer specializing in AWS, Kubernetes, Terraform, and enterprise infrastructure for global clients across UK, Saudi Arabia, and UAE." />
+<meta property="og:title" content="Er. P. Ramnath — Cloud Engineer" />
+<meta property="og:description" content="Cloud Engineering · Global Infrastructure · TCS · Zoho" />
+<meta name="theme-color" content="#0067ff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   CSS VARIABLES & RESET
+   ============================================================ */
+:root {
+  --blue: #0067ff;
+  --blue-light: #3d8bff;
+  --blue-dark: #0047c8;
+  --blue-glow: rgba(0,103,255,0.15);
+  --slate: #64748b;
+  --slate-light: #94a3b8;
+  --bg: #ffffff;
+  --bg-2: #f7f9ff;
+  --bg-3: #eef2ff;
+  --text: #0f172a;
+  --text-2: #334155;
+  --text-3: #64748b;
+  --border: #e2e8f0;
+  --border-hover: #bfcfff;
+  --card: #ffffff;
+  --shadow: 0 4px 24px rgba(0,103,255,0.08);
+  --shadow-lg: 0 20px 60px rgba(0,103,255,0.12);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 16px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Hacker vars */
+  --hk-green: #00ff41;
+  --hk-green-dim: #00cc35;
+  --hk-green-faint: rgba(0,255,65,0.08);
+  --hk-bg: #000000;
+  --hk-bg-2: #040a04;
+  --hk-border: rgba(0,255,65,0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+  cursor: default;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ============================================================
+   HACKER MODE
+   ============================================================ */
+body.hacker {
+  --bg: #000000;
+  --bg-2: #030803;
+  --bg-3: #020502;
+  --text: #00ff41;
+  --text-2: #00cc35;
+  --text-3: #009926;
+  --border: rgba(0,255,65,0.18);
+  --border-hover: rgba(0,255,65,0.5);
+  --card: #050f05;
+  --shadow: 0 4px 24px rgba(0,255,65,0.06);
+  --shadow-lg: 0 0 60px rgba(0,255,65,0.12);
+  --font-display: var(--font-mono);
+  --font-body: var(--font-mono);
+  --blue: #00ff41;
+  --blue-light: #00ff41;
+  --blue-glow: rgba(0,255,65,0.15);
+  background: #000;
+  color: #00ff41;
+}
+body.hacker * { letter-spacing: 0.03em; }
+
+/* Scanlines */
+body.hacker::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,255,65,0.025) 3px,
+    rgba(0,255,65,0.025) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  animation: scanMove 10s linear infinite;
+}
+/* CRT vignette */
+body.hacker::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes scanMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 200px; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes blink {
+  0%,100% { opacity: 1; } 50% { opacity: 0; }
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.8); opacity: 0; }
+}
+@keyframes pulseRing {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50%      { transform: translateY(-12px); }
+}
+@keyframes glitchFlash {
+  0%   { clip-path: inset(0 0 100% 0); }
+  10%  { clip-path: inset(10% 0 60% 0); transform: translate(-4px, 0); }
+  20%  { clip-path: inset(50% 0 10% 0); transform: translate(4px, 0); }
+  30%  { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 0); }
+  40%  { clip-path: inset(60% 0 20% 0); transform: translate(2px, 0); }
+  50%  { clip-path: inset(0 0 0 0);     transform: translate(0, 0); }
+  100% { clip-path: inset(0 0 0 0); }
+}
+@keyframes typeWrite {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes orbFloat {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(30px,-20px) scale(1.05); }
+  66%      { transform: translate(-20px,15px) scale(0.97); }
+}
+@keyframes orb2Float {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(-25px,20px) scale(1.03); }
+  66%      { transform: translate(20px,-15px) scale(0.98); }
+}
+@keyframes countdownShrink {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+@keyframes nodeGlow {
+  0%,100% { box-shadow: 0 0 6px 2px rgba(0,255,65,0.4); }
+  50%      { box-shadow: 0 0 20px 6px rgba(0,255,65,0.7); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes barFill {
+  from { width: 0; }
+}
+@keyframes cardReveal {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 4px; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition);
+}
+body.hacker #navbar {
+  background: rgba(0,0,0,0.92);
+  border-bottom-color: var(--hk-border);
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+}
+body.hacker .nav-logo { letter-spacing: 0.08em; font-size: 15px; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-3);
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.nav-link:hover { color: var(--blue); background: var(--blue-glow); }
+body.hacker .nav-link:hover { color: var(--hk-green); background: var(--hk-green-faint); }
+
+/* Terminal button */
+#hackerBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background: var(--blue);
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.25s;
+  box-shadow: 0 2px 12px rgba(0,103,255,0.35);
+  letter-spacing: 0.01em;
+}
+#hackerBtn:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,103,255,0.4); }
+body.hacker #hackerBtn {
+  background: #000;
+  color: var(--hk-green);
+  border-color: var(--hk-green);
+  box-shadow: 0 0 16px rgba(0,255,65,0.25);
+}
+body.hacker #hackerBtn:hover { box-shadow: 0 0 28px rgba(0,255,65,0.5); }
+.btn-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: blink 1.4s ease-in-out infinite;
+}
+body.hacker .btn-dot { background: var(--hk-green); }
+
+/* Countdown bar */
+#countdownBar {
+  display: none;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  z-index: 999;
+  height: 3px;
+  background: rgba(0,255,65,0.15);
+}
+#countdownFill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff41, #00cc35);
+  width: 100%;
+  box-shadow: 0 0 8px rgba(0,255,65,0.6);
+}
+#countdownLabel {
+  display: none;
+  position: fixed;
+  top: 71px;
+  right: 40px;
+  z-index: 999;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(0,255,65,0.6);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-orbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+.orb-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,103,255,0.3), transparent 70%);
+  top: -200px; right: -100px;
+  animation: orbFloat 12s ease-in-out infinite;
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(99,179,255,0.25), transparent 70%);
+  bottom: -100px; left: -80px;
+  animation: orb2Float 15s ease-in-out infinite;
+}
+body.hacker .orb-1 {
+  background: radial-gradient(circle, rgba(0,255,65,0.12), transparent 70%);
+}
+body.hacker .orb-2 {
+  background: radial-gradient(circle, rgba(0,200,50,0.08), transparent 70%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-glow);
+  border: 1px solid rgba(0,103,255,0.2);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s ease both;
+}
+body.hacker .hero-eyebrow {
+  color: var(--hk-green);
+  background: var(--hk-green-faint);
+  border-color: var(--hk-border);
+}
+.hero-eyebrow-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  animation: blink 1.2s ease-in-out infinite;
+}
+body.hacker .hero-eyebrow-dot { background: var(--hk-green); }
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+body.hacker .hero-name {
+  letter-spacing: 0.04em;
+  font-size: clamp(32px, 4vw, 52px);
+  text-shadow: 0 0 30px rgba(0,255,65,0.4);
+}
+.hero-name .accent {
+  background: linear-gradient(135deg, #0067ff, #3d8bff, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: shimmer 4s linear infinite;
+}
+body.hacker .hero-name .accent {
+  background: linear-gradient(135deg, #00ff41, #00cc35, #00ff41);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-2);
+  margin-bottom: 8px;
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+body.hacker .hero-title { color: var(--hk-green-dim); }
+.hero-tagline {
+  font-size: 15px;
+  color: var(--text-3);
+  font-style: italic;
+  margin-bottom: 28px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+body.hacker .hero-tagline { font-style: normal; color: var(--text-3); }
+.hero-bio {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-2);
+  max-width: 560px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s 0.25s ease both;
+}
+body.hacker .hero-bio { color: var(--text-3); }
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(0,103,255,0.4);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,103,255,0.5); background: var(--blue-dark); }
+body.hacker .btn-primary {
+  background: var(--hk-green);
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0,255,65,0.3);
+}
+body.hacker .btn-primary:hover { box-shadow: 0 0 40px rgba(0,255,65,0.5); }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 1.5px solid var(--border);
+  color: var(--text-2);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s;
+}
+.btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+body.hacker .btn-secondary { border-color: var(--hk-border); color: var(--hk-green-dim); }
+body.hacker .btn-secondary:hover { border-color: var(--hk-green); color: var(--hk-green); }
+
+/* Stats bar */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+body.hacker .hero-stats { border-top-color: var(--hk-border); }
+.stat-item {}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--blue);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+body.hacker .stat-num { color: var(--hk-green); text-shadow: 0 0 20px rgba(0,255,65,0.5); }
+.stat-label { font-size: 12px; color: var(--text-3); margin-top: 4px; font-weight: 500; }
+
+/* Profile card */
+.profile-card {
+  position: relative;
+  animation: fadeUp 0.6s 0.2s ease both, float 6s ease-in-out infinite 1s;
+}
+.profile-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe, #eff6ff);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(0,103,255,0.1);
+  transition: all var(--transition);
+}
+body.hacker .profile-frame {
+  background: #050f05;
+  box-shadow: 0 0 60px rgba(0,255,65,0.15), 0 0 0 1px rgba(0,255,65,0.2);
+  border-radius: 0;
+}
+.profile-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+.profile-frame:hover img { transform: scale(1.03); }
+
+/* Profile placeholder */
+.profile-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #dbeafe 0%, #eff6ff 100%);
+  font-size: 100px;
+  position: relative;
+}
+body.hacker .profile-placeholder {
+  background: linear-gradient(145deg, #020a02, #040f04);
+}
+.profile-placeholder .avatar-ring {
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0,103,255,0.15), rgba(99,179,255,0.25));
+  border: 2px solid rgba(0,103,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  box-shadow: 0 0 40px rgba(0,103,255,0.2);
+  transition: all var(--transition);
+}
+body.hacker .profile-placeholder .avatar-ring {
+  background: rgba(0,255,65,0.05);
+  border-color: rgba(0,255,65,0.3);
+  box-shadow: 0 0 40px rgba(0,255,65,0.15);
+  animation: nodeGlow 2s ease-in-out infinite;
+}
+.profile-name-tag {
+  position: absolute;
+  bottom: 20px; left: 16px; right: 16px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid rgba(0,103,255,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+body.hacker .profile-name-tag {
+  background: rgba(0,10,0,0.9);
+  border-color: rgba(0,255,65,0.25);
+  box-shadow: 0 0 20px rgba(0,255,65,0.1);
+}
+.profile-name-tag .pname {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+}
+body.hacker .profile-name-tag .pname { color: var(--hk-green); }
+.profile-name-tag .ptitle {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+body.hacker .profile-name-tag .ptitle { color: var(--text-3); }
+.profile-badge {
+  position: absolute;
+  top: -12px; right: -12px;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,103,255,0.4);
+  border: 3px solid var(--bg);
+  transition: all var(--transition);
+}
+body.hacker .profile-badge {
+  background: var(--hk-green);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0,255,65,0.5);
+  border-color: #000;
+}
+.availability-chip {
+  position: absolute;
+  bottom: -16px; left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+}
+body.hacker .availability-chip {
+  background: #000;
+  border-color: var(--hk-border);
+  color: var(--hk-green-dim);
+}
+.avail-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: blink 2s ease-in-out infinite;
+}
+body.hacker .avail-dot { background: var(--hk-green); }
+
+/* ============================================================
+   SCROLL INDICATOR
+   ============================================================ */
+.scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 1s 1.5s ease both;
+}
+.scroll-mouse {
+  width: 24px; height: 38px;
+  border: 2px solid var(--border);
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+.scroll-wheel {
+  width: 3px; height: 8px;
+  background: var(--blue);
+  border-radius: 2px;
+  animation: float 1.5s ease-in-out infinite;
+}
+body.hacker .scroll-mouse { border-color: var(--hk-border); }
+body.hacker .scroll-wheel { background: var(--hk-green); }
+.scroll-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); }
+
+/* ============================================================
+   SECTION COMMONS
+   ============================================================ */
+section {
+  padding: 100px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+body.hacker .section-tag { color: var(--hk-green); }
+.section-tag::before {
+  content: '';
+  width: 20px; height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+body.hacker .section-tag::before { background: var(--hk-green); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+body.hacker .section-title { letter-spacing: 0.04em; font-size: clamp(24px, 3vw, 36px); }
+.section-sub {
+  font-size: 16px;
+  color: var(--text-3);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   EXPERIENCE TIMELINE
+   ============================================================ */
+#experience { background: var(--bg-2); max-width: 100%; border-radius: 0; }
+.exp-inner { max-width: 1100px; margin: 0 auto; }
+body.hacker #experience { background: var(--hk-bg); }
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 47px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), rgba(0,103,255,0.1));
+  border-radius: 2px;
+}
+body.hacker .timeline::before {
+  background: linear-gradient(to bottom, var(--hk-green), rgba(0,255,65,0.05));
+}
+.timeline-item {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 40px;
+  position: relative;
+  animation-fill-mode: both;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot-wrap {
+  flex-shrink: 0;
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 0 0 6px var(--bg-2), 0 4px 16px rgba(0,103,255,0.3);
+  flex-shrink: 0;
+  z-index: 1;
+  transition: all var(--transition);
+}
+body.hacker .timeline-dot {
+  background: #000;
+  border: 2px solid var(--hk-green);
+  box-shadow: 0 0 0 6px #000, 0 0 20px rgba(0,255,65,0.3);
+  animation: nodeGlow 2s ease-in-out infinite;
+}
+.timeline-dot:hover { transform: scale(1.1); }
+.tl-card {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.tl-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(4px);
+}
+body.hacker .tl-card { background: var(--card); border-color: var(--border); }
+body.hacker .tl-card:hover { border-color: var(--hk-green); box-shadow: 0 0 30px rgba(0,255,65,0.08); }
+.tl-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.tl-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--blue);
+  background: var(--blue-glow);
+  border: 1px solid rgba(0,103,255,0.15);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+body.hacker .tl-period { color: var(--hk-green); background: var(--hk-green-faint); border-color: var(--hk-border); }
+.tl-role { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+body.hacker .tl-role { font-family: var(--font-mono); }
+.tl-company { font-size: 14px; color: var(--blue); font-weight: 600; margin-bottom: 4px; }
+body.hacker .tl-company { color: var(--hk-green); }
+.tl-region { font-size: 13px; color: var(--text-3); margin-bottom: 12px; }
+.tl-desc { font-size: 14px; line-height: 1.7; color: var(--text-2); }
+body.hacker .tl-desc { color: var(--text-3); }
+.tl-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.tl-tag {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--bg-3);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  letter-spacing: 0.03em;
+}
+body.hacker .tl-tag { background: #050f05; color: var(--text-3); border-color: var(--hk-border); }
+
+/* ============================================================
+   GLOBAL MAP
+   ============================================================ */
+#map-section { position: relative; overflow: hidden; }
+.map-container {
+  position: relative;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 40px;
+}
+body.hacker .map-container { background: #030803; border-color: var(--hk-border); }
+.world-svg { width: 100%; height: auto; display: block; }
+/* Map region cards */
+.map-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+.legend-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: all 0.3s;
+}
+.legend-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow); transform: translateY(-3px); }
+body.hacker .legend-card { background: var(--card); border-color: var(--border); }
+body.hacker .legend-card:hover { border-color: var(--hk-green); box-shadow: 0 0 20px rgba(0,255,65,0.06); }
+.legend-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.legend-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+body.hacker .legend-label { color: var(--hk-green); }
+.legend-info { font-size: 12px; color: var(--text-3); }
+
+/* SVG map dots */
+.map-dot-group { cursor: pointer; }
+.map-pulse {
+  animation: pulse 2s ease-out infinite;
+  transform-origin: center;
+}
+.map-dot { transition: all 0.2s; }
+.map-dot-group:hover .map-dot { r: 7; }
+
+/* ============================================================
+   TECH STACK
+   ============================================================ */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+.stack-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.stack-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.stack-card.cloud::before { background: linear-gradient(90deg, #ff6b35, #f7c59f); }
+.stack-card.containers::before { background: linear-gradient(90deg, #2496ed, #3dbeff); }
+.stack-card.iac::before { background: linear-gradient(90deg, #623ce4, #a78bfa); }
+.stack-card.networking::before { background: linear(90deg, #059669, #34d399); }
+.stack-card.networking::before { background: linear-gradient(90deg, #059669, #34d399); }
+
+.stack-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+body.hacker .stack-card { background: var(--card); border-color: var(--border); }
+body.hacker .stack-card:hover { border-color: var(--hk-green); box-shadow: 0 0 30px rgba(0,255,65,0.08); }
+body.hacker .stack-card::before { background: linear-gradient(90deg, var(--hk-green), rgba(0,255,65,0.3)) !important; }
+.stack-cat-icon {
+  font-size: 32px;
+  margin-bottom: 14px;
+  display: block;
+}
+.stack-cat-name {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+body.hacker .stack-cat-name { color: var(--hk-green); }
+.stack-cat-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+body.hacker .stack-cat-title { font-family: var(--font-mono); font-size: 16px; }
+.stack-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  font-size: 12px; font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: var(--bg-3);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  letter-spacing: 0.03em;
+  transition: all 0.2s;
+}
+.pill:hover { background: var(--blue); color: #fff; border-color: var(--blue); transform: scale(1.04); }
+body.hacker .pill { background: #050f05; color: var(--hk-green-dim); border-color: var(--hk-border); }
+body.hacker .pill:hover { background: var(--hk-green); color: #000; border-color: var(--hk-green); }
+
+/* ============================================================
+   SKILLS / PROFICIENCY BARS
+   ============================================================ */
+#skills { background: var(--bg-2); max-width: 100%; }
+body.hacker #skills { background: var(--hk-bg); }
+.skills-inner { max-width: 1100px; margin: 0 auto; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.skill-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: all 0.3s;
+}
+.skill-item:hover { border-color: var(--border-hover); box-shadow: var(--shadow); }
+body.hacker .skill-item { background: var(--card); border-color: var(--border); }
+body.hacker .skill-item:hover { border-color: var(--hk-green); }
+.skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.skill-name { font-size: 14px; font-weight: 600; color: var(--text); }
+body.hacker .skill-name { color: var(--hk-green); }
+.skill-pct { font-size: 13px; font-weight: 700; color: var(--blue); font-family: var(--font-mono); }
+body.hacker .skill-pct { color: var(--hk-green); }
+.skill-track {
+  height: 6px;
+  background: var(--bg-3);
+  border-radius: 100px;
+  overflow: hidden;
+}
+body.hacker .skill-track { background: #0a1a0a; }
+.skill-bar {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--blue), var(--blue-light));
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.hacker .skill-bar { background: linear-gradient(90deg, #00aa2b, var(--hk-green)); }
+.skill-item.animate .skill-bar { width: var(--pct); }
+
+/* ============================================================
+   TECHNICAL NOTES
+   ============================================================ */
+.notes-grid { display: flex; flex-direction: column; gap: 14px; }
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.note-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow);
+  transform: translateX(6px);
+}
+body.hacker .note-card { background: var(--card); border-color: var(--border); }
+body.hacker .note-card:hover { border-color: var(--hk-green); box-shadow: 0 0 20px rgba(0,255,65,0.06); }
+.note-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  width: 28px;
+  flex-shrink: 0;
+}
+body.hacker .note-num { color: var(--hk-green); }
+.note-content { flex: 1; }
+.note-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+body.hacker .note-title { color: var(--hk-green); }
+.note-meta { display: flex; gap: 12px; align-items: center; }
+.note-date { font-size: 12px; color: var(--text-3); }
+.note-tag {
+  font-size: 11px; font-weight: 600;
+  padding: 2px 8px; border-radius: 5px;
+  background: var(--blue-glow);
+  color: var(--blue);
+  border: 1px solid rgba(0,103,255,0.15);
+}
+body.hacker .note-tag {
+  background: var(--hk-green-faint);
+  color: var(--hk-green);
+  border-color: var(--hk-border);
+}
+.note-arrow { font-size: 18px; color: var(--text-3); transition: transform 0.2s; }
+.note-card:hover .note-arrow { transform: translateX(4px); color: var(--blue); }
+body.hacker .note-card:hover .note-arrow { color: var(--hk-green); }
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+#contact { background: var(--bg-2); max-width: 100%; }
+body.hacker #contact { background: var(--hk-bg); }
+.contact-inner { max-width: 1100px; margin: 0 auto; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+body.hacker .contact-card { background: var(--card); border-color: var(--border); }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+body.hacker .contact-item { border-bottom-color: var(--hk-border); }
+.contact-item:last-child { border-bottom: none; }
+.contact-item:hover { padding-left: 6px; }
+.ci-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--blue-glow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,103,255,0.15);
+}
+body.hacker .ci-icon { background: var(--hk-green-faint); border-color: var(--hk-border); }
+.ci-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); margin-bottom: 2px; }
+.ci-value { font-size: 14px; font-weight: 500; color: var(--text); }
+body.hacker .ci-value { color: var(--hk-green); }
+.tech-stack-display {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+}
+body.hacker .tech-stack-display { background: var(--card); border-color: var(--border); }
+.deploy-info {
+  font-size: 13px;
+  color: var(--text-3);
+  line-height: 1.8;
+  font-family: var(--font-mono);
+}
+body.hacker .deploy-info { color: var(--hk-green-dim); }
+.deploy-info span { color: var(--blue); }
+body.hacker .deploy-info span { color: var(--hk-green); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 40px;
+  text-align: center;
+}
+body.hacker footer {
+  background: #000;
+  border-top: 1px solid var(--hk-border);
+  color: var(--hk-green-dim);
+}
+.footer-name { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+body.hacker .footer-name { color: var(--hk-green); }
+.footer-sub { font-size: 13px; margin-bottom: 24px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: 13px; }
+.footer-link { color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.footer-link:hover { color: #fff; }
+body.hacker .footer-link { color: rgba(0,255,65,0.4); }
+body.hacker .footer-link:hover { color: var(--hk-green); }
+
+/* ============================================================
+   HACKER TERMINAL OVERLAY
+   ============================================================ */
+#hackerOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--font-mono);
+}
+#hackerOverlay.active { display: flex; animation: fadeIn 0.2s ease; }
+.terminal-window {
+  width: min(640px, 90vw);
+  background: #000;
+  border: 1px solid #00ff41;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0,255,65,0.3), 0 0 120px rgba(0,255,65,0.1);
+}
+.terminal-bar {
+  background: #0a1a0a;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #00ff4133;
+}
+.t-dot { width: 10px; height: 10px; border-radius: 50%; }
+.t-dot-r { background: #ff5f57; }
+.t-dot-y { background: #febc2e; }
+.t-dot-g { background: #28c841; }
+.terminal-title { font-size: 12px; color: #00ff4166; margin-left: 8px; }
+.terminal-body { padding: 24px; font-size: 13px; color: #00ff41; line-height: 1.8; }
+.t-line { margin-bottom: 4px; }
+.t-prompt { color: #00cc35; }
+.t-cmd { color: #ffffff; }
+.t-out { color: #00aa26; }
+.t-success { color: #00ff41; font-weight: 600; }
+.cursor { animation: blink 1s step-end infinite; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  #navbar { padding: 0 20px; }
+  .nav-links .nav-link { display: none; }
+  #hero { padding: 90px 20px 60px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-name { font-size: 42px; }
+  .profile-card { max-width: 320px; margin: 0 auto; }
+  section { padding: 70px 20px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; }
+  #experience, #skills, #contact { padding: 70px 20px; }
+  .exp-inner, .skills-inner, .contact-inner { padding: 0; }
+}
+@media (max-width: 600px) {
+  .hero-name { font-size: 34px; }
+  .section-title { font-size: 28px; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .timeline::before { display: none; }
+  .timeline-item { flex-direction: column; gap: 12px; }
+  .tl-card { padding: 20px; }
+  footer { padding: 40px 20px; }
+  #navbar { height: 60px; }
+  #countdownBar { top: 60px; }
+  #countdownLabel { top: 63px; right: 20px; }
+  .map-legend { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar">
+  <div class="nav-logo" id="navLogo">Er. P. Ramnath</div>
+  <div class="nav-links">
+    <a class="nav-link" href="#experience">Experience</a>
+    <a class="nav-link" href="#stack">Stack</a>
+    <a class="nav-link" href="#map-section">Global</a>
+    <a class="nav-link" href="#notes">Notes</a>
+    <a class="nav-link" href="#contact">Contact</a>
+    <button id="hackerBtn" onclick="toggleHacker()">
+      <div class="btn-dot"></div>
+      <span id="hackerBtnText">&gt;_ run terminal.sh</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Countdown -->
+<div id="countdownBar"><div id="countdownFill"></div></div>
+<div id="countdownLabel">// reverting in <span id="countdownNum">15</span>s</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="hero-grid">
+    <!-- LEFT: Text -->
+    <div>
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span id="heroEyebrow">Cloud Engineer · Chennai · Zoho</span>
+      </div>
+      <h1 class="hero-name">
+        <span id="heroNameLine1">Er. P.</span><br>
+        <span class="accent" id="heroNameLine2">Ramnath</span>
+      </h1>
+      <div class="hero-title" id="heroTitle">Cloud Infrastructure Engineer</div>
+      <div class="hero-tagline" id="heroTagline">"Booting my Career"</div>
+      <p class="hero-bio" id="heroBio">
+        Enterprise Cloud Engineer specializing in multi-cloud infrastructure, container orchestration, and infrastructure-as-code. Delivering scalable, fault-tolerant systems for global clients across UK, Saudi Arabia & UAE.
+      </p>
+      <div class="hero-ctas">
+        <a href="mailto:abc@gmail.com" class="btn-primary" id="heroCta1">
+          <span>✉</span> <span id="cta1Text">Get in Touch</span>
+        </a>
+        <a href="#experience" class="btn-secondary" id="heroCta2">
+          <span id="cta2Text">View Experience</span> <span>↓</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item reveal">
+          <div class="stat-num" id="stat1">3+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num" id="stat2">3</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num" id="stat3">12+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num" id="stat4">99.9%</div>
+          <div class="stat-label">Uptime Target</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Profile -->
+    <div class="profile-card">
+      <div class="profile-frame">
+        <!-- 
+          DEVELOPER NOTE:
+          Replace this div with:
+          <img src="/public/images/profile.jpg" alt="Er. P. Ramnath" />
+        -->
+        <div class="profile-placeholder">
+          <div class="avatar-ring">👨‍💻</div>
+        </div>
+        <!-- Name tag overlay -->
+        <div class="profile-name-tag">
+          <div class="pname">Er. P. Ramnath</div>
+          <div class="ptitle">☁️ Cloud Engineer · Zoho · Chennai</div>
+        </div>
+      </div>
+      <div class="profile-badge">☁️</div>
+      <div class="availability-chip">
+        <div class="avail-dot"></div>
+        <span>Available for Enterprise Projects</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <div class="scroll-label">Scroll to explore</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<div id="experience">
+<section class="exp-inner">
+  <div class="reveal">
+    <div class="section-tag" id="expTag">Experience</div>
+    <h2 class="section-title" id="expTitle">Global Engineering Timeline</h2>
+    <p class="section-sub" id="expSub">
+      Delivering enterprise cloud solutions across the UK and Middle East — from financial services infrastructure to large-scale DevOps transformations.
+    </p>
+  </div>
+
+  <div class="timeline">
+    <!-- Current Role -->
+    <div class="timeline-item reveal">
+      <div class="timeline-dot-wrap">
+        <div class="timeline-dot">🇸🇦</div>
+      </div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div>
+            <div class="tl-role" id="role1">Cloud Engineer</div>
+            <div class="tl-company">Zoho Corporation</div>
+            <div class="tl-region">🌍 Saudi Arabia & UAE Clients</div>
+          </div>
+          <div class="tl-period" id="period1">Mar 2025 – Present</div>
+        </div>
+        <div class="tl-desc" id="desc1">
+          Building and maintaining cloud-native infrastructure for enterprise clients across KSA and UAE. Architecting multi-region AWS deployments, managing Kubernetes clusters, and implementing GitOps-based CI/CD pipelines at scale.
+        </div>
+        <div class="tl-tags">
+          <span class="tl-tag">AWS</span>
+          <span class="tl-tag">Kubernetes</span>
+          <span class="tl-tag">Terraform</span>
+          <span class="tl-tag">Ansible</span>
+          <span class="tl-tag">GitOps</span>
+          <span class="tl-tag">Middle East</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Previous Role -->
+    <div class="timeline-item reveal reveal-delay-1">
+      <div class="timeline-dot-wrap">
+        <div class="timeline-dot">🇬🇧</div>
+      </div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div>
+            <div class="tl-role" id="role2">Cloud Engineer</div>
+            <div class="tl-company">Tata Consultancy Services (TCS)</div>
+            <div class="tl-region">🇬🇧 UK Enterprise Clients</div>
+          </div>
+          <div class="tl-period" id="period2">Aug 2022 – Dec 2023</div>
+        </div>
+        <div class="tl-desc" id="desc2">
+          Managed enterprise cloud migrations, networking architecture, and IaC automation pipelines for major UK-based organisations. Implemented DNS and DHCP infrastructure using ISC DHCP and Foreman for large-scale on-prem and hybrid deployments.
+        </div>
+        <div class="tl-tags">
+          <span class="tl-tag">Docker</span>
+          <span class="tl-tag">Puppet</span>
+          <span class="tl-tag">Foreman</span>
+          <span class="tl-tag">Linux</span>
+          <span class="tl-tag">ISC DHCP</span>
+          <span class="tl-tag">DNS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================
+     GLOBAL IMPACT MAP
+     ============================================================ -->
+<section id="map-section">
+  <div class="reveal">
+    <div class="section-tag" id="mapTag">Global Reach</div>
+    <h2 class="section-title" id="mapTitle">Worldwide Client Footprint</h2>
+    <p class="section-sub">Delivering enterprise cloud infrastructure across three continents — UK, India, and the Middle East.</p>
+  </div>
+
+  <div class="map-container reveal">
+    <svg class="world-svg" viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="mapBg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e8f0ff" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#f0f4ff" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- Grid lines -->
+      <line x1="0" y1="140" x2="800" y2="140" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="0" y1="210" x2="800" y2="210" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="0" y1="280" x2="800" y2="280" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="200" y1="0" x2="200" y2="420" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="400" y1="0" x2="400" y2="420" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+      <line x1="600" y1="0" x2="600" y2="420" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+      <!-- Continents (simplified) -->
+      <!-- North America -->
+      <path d="M 60 80 Q 80 60 120 70 Q 160 65 180 90 Q 200 110 195 150 Q 190 190 175 210 Q 160 230 140 220 Q 110 225 90 200 Q 60 180 55 150 Q 50 120 60 80 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- South America -->
+      <path d="M 140 250 Q 165 240 185 255 Q 200 270 198 310 Q 195 350 175 365 Q 155 375 140 360 Q 120 340 118 300 Q 116 265 140 250 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- Europe -->
+      <path d="M 340 60 Q 360 50 390 58 Q 415 62 425 80 Q 430 95 420 110 Q 408 122 390 118 Q 368 120 352 108 Q 335 94 338 78 Q 338 68 340 60 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- UK specifically -->
+      <path d="M 347 58 Q 356 50 364 55 Q 370 60 367 70 Q 362 78 354 76 Q 346 72 347 58 Z" fill="#d0e2ff" stroke="#b0c8ff" stroke-width="1.5"/>
+      <!-- Africa -->
+      <path d="M 355 145 Q 385 135 410 150 Q 430 165 428 210 Q 426 255 405 285 Q 380 305 358 295 Q 332 280 328 240 Q 322 200 330 170 Q 338 150 355 145 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- Middle East -->
+      <path d="M 450 120 Q 480 110 510 118 Q 535 126 540 150 Q 542 172 524 183 Q 505 192 482 186 Q 458 178 448 158 Q 440 140 450 120 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- Saudi specifically -->
+      <path d="M 460 132 Q 490 122 516 135 Q 530 148 524 168 Q 510 182 488 178 Q 463 172 455 155 Q 448 140 460 132 Z" fill="#d0e2ff" stroke="#b0c8ff" stroke-width="1.5"/>
+      <!-- India -->
+      <path d="M 556 150 Q 580 140 600 155 Q 618 168 614 200 Q 608 232 588 245 Q 568 250 552 235 Q 536 218 538 190 Q 540 162 556 150 Z" fill="#d0e2ff" stroke="#b0c8ff" stroke-width="1.5"/>
+      <!-- East Asia -->
+      <path d="M 620 90 Q 660 78 695 92 Q 720 104 718 130 Q 714 155 690 162 Q 662 168 638 155 Q 616 140 616 115 Q 616 99 620 90 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+      <!-- Australia -->
+      <path d="M 620 280 Q 660 268 695 278 Q 720 290 718 320 Q 714 348 688 356 Q 658 360 634 345 Q 612 328 614 304 Q 615 288 620 280 Z" fill="#dde8f8" stroke="#c5d8f0" stroke-width="1"/>
+
+      <!-- Connection lines -->
+      <!-- UK → India -->
+      <path d="M 357 62 Q 460 20 575 185" stroke="#0067ff" stroke-width="1.5" stroke-dasharray="6,4" fill="none" opacity="0.5"/>
+      <!-- India → Saudi -->
+      <path d="M 572 188 Q 540 170 492 158" stroke="#0067ff" stroke-width="1.5" stroke-dasharray="6,4" fill="none" opacity="0.5"/>
+      <!-- India → UAE -->
+      <path d="M 572 188 Q 545 175 510 165" stroke="#0067ff" stroke-width="1.5" stroke-dasharray="6,4" fill="none" opacity="0.5"/>
+
+      <!-- UK dot -->
+      <g class="map-dot-group">
+        <circle cx="357" cy="62" r="14" fill="rgba(0,103,255,0.1)" class="map-pulse"/>
+        <circle cx="357" cy="62" r="8" fill="rgba(0,103,255,0.2)" class="map-pulse" style="animation-delay:0.3s"/>
+        <circle cx="357" cy="62" r="6" fill="#0067ff" class="map-dot" filter="url(#glow)"/>
+        <text x="357" y="52" text-anchor="middle" font-size="11" fill="#0047c8" font-weight="700" font-family="DM Sans, sans-serif">🇬🇧 UK</text>
+      </g>
+
+      <!-- Saudi dot -->
+      <g class="map-dot-group">
+        <circle cx="490" cy="158" r="14" fill="rgba(0,103,255,0.1)" class="map-pulse" style="animation-delay:0.5s"/>
+        <circle cx="490" cy="158" r="8" fill="rgba(0,103,255,0.2)" class="map-pulse" style="animation-delay:0.8s"/>
+        <circle cx="490" cy="158" r="6" fill="#0067ff" class="map-dot" filter="url(#glow)"/>
+        <text x="490" y="148" text-anchor="middle" font-size="11" fill="#0047c8" font-weight="700" font-family="DM Sans, sans-serif">🇸🇦 KSA</text>
+      </g>
+
+      <!-- UAE dot -->
+      <g class="map-dot-group">
+        <circle cx="516" cy="165" r="14" fill="rgba(0,103,255,0.1)" class="map-pulse" style="animation-delay:0.7s"/>
+        <circle cx="516" cy="165" r="8" fill="rgba(0,103,255,0.2)" class="map-pulse" style="animation-delay:1s"/>
+        <circle cx="516" cy="165" r="6" fill="#0067ff" class="map-dot" filter="url(#glow)"/>
+        <text x="530" y="178" text-anchor="middle" font-size="11" fill="#0047c8" font-weight="700" font-family="DM Sans, sans-serif">🇦🇪 UAE</text>
+      </g>
+
+      <!-- India (base) dot -->
+      <g class="map-dot-group">
+        <circle cx="572" cy="188" r="14" fill="rgba(255,140,0,0.15)" class="map-pulse" style="animation-delay:1s"/>
+        <circle cx="572" cy="188" r="8" fill="rgba(255,140,0,0.2)" class="map-pulse" style="animation-delay:1.3s"/>
+        <circle cx="572" cy="188" r="7" fill="#ff8c00" class="map-dot" filter="url(#glow)"/>
+        <text x="580" y="206" text-anchor="middle" font-size="11" fill="#c06000" font-weight="700" font-family="DM Sans, sans-serif">🇮🇳 Chennai</text>
+      </g>
+    </svg>
+
+    <!-- Legend cards -->
+    <div class="map-legend">
+      <div class="legend-card">
+        <div class="legend-icon" style="background: #eff5ff; border: 1px solid #c0d4ff;">🇬🇧</div>
+        <div>
+          <div class="legend-label">United Kingdom</div>
+          <div class="legend-info">Aug 2022 – Dec 2023 · TCS</div>
+        </div>
+      </div>
+      <div class="legend-card">
+        <div class="legend-icon" style="background: #eff5ff; border: 1px solid #c0d4ff;">🇸🇦</div>
+        <div>
+          <div class="legend-label">Saudi Arabia</div>
+          <div class="legend-info">Mar 2025 – Present · Zoho</div>
+        </div>
+      </div>
+      <div class="legend-card">
+        <div class="legend-icon" style="background: #eff5ff; border: 1px solid #c0d4ff;">🇦🇪</div>
+        <div>
+          <div class="legend-label">UAE</div>
+          <div class="legend-info">Mar 2025 – Present · Zoho</div>
+        </div>
+      </div>
+      <div class="legend-card">
+        <div class="legend-icon" style="background: #fff5e6; border: 1px solid #ffd8a0;">🇮🇳</div>
+        <div>
+          <div class="legend-label">India (Base)</div>
+          <div class="legend-info">Chennai · Zoho HQ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TECH STACK
+     ============================================================ -->
+<section id="stack">
+  <div class="reveal">
+    <div class="section-tag" id="stackTag">Technical Ecosystem</div>
+    <h2 class="section-title" id="stackTitle">The Stack</h2>
+    <p class="section-sub" id="stackSub">Proven tools and platforms used to architect, deploy, and operate enterprise-grade cloud infrastructure at scale.</p>
+  </div>
+
+  <div class="stack-grid">
+    <div class="stack-card cloud reveal">
+      <span class="stack-cat-icon">☁️</span>
+      <div class="stack-cat-name">Cloud Platform</div>
+      <div class="stack-cat-title">Amazon Web Services</div>
+      <div class="stack-pills">
+        <span class="pill">EC2</span>
+        <span class="pill">S3</span>
+        <span class="pill">CloudFront</span>
+        <span class="pill">VPC</span>
+        <span class="pill">IAM</span>
+        <span class="pill">EKS</span>
+        <span class="pill">Route 53</span>
+      </div>
+    </div>
+
+    <div class="stack-card containers reveal reveal-delay-1">
+      <span class="stack-cat-icon">🐳</span>
+      <div class="stack-cat-name">Containers & Orchestration</div>
+      <div class="stack-cat-title">Docker & Kubernetes</div>
+      <div class="stack-pills">
+        <span class="pill">Docker</span>
+        <span class="pill">Kubernetes</span>
+        <span class="pill">Helm</span>
+        <span class="pill">EKS</span>
+        <span class="pill">kubectl</span>
+      </div>
+    </div>
+
+    <div class="stack-card iac reveal reveal-delay-2">
+      <span class="stack-cat-icon">⚙️</span>
+      <div class="stack-cat-name">IaC & Automation</div>
+      <div class="stack-cat-title">Terraform & Ansible</div>
+      <div class="stack-pills">
+        <span class="pill">Terraform</span>
+        <span class="pill">Ansible</span>
+        <span class="pill">Puppet</span>
+        <span class="pill">Foreman</span>
+        <span class="pill">GitOps</span>
+      </div>
+    </div>
+
+    <div class="stack-card networking reveal reveal-delay-3">
+      <span class="stack-cat-icon">🔧</span>
+      <div class="stack-cat-name">Networking & OS</div>
+      <div class="stack-cat-title">Linux Infrastructure</div>
+      <div class="stack-pills">
+        <span class="pill">Linux</span>
+        <span class="pill">DNS</span>
+        <span class="pill">ISC DHCP</span>
+        <span class="pill">Kea DHCP</span>
+        <span class="pill">Bash</span>
+        <span class="pill">TCP/IP</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<div id="skills">
+<section class="skills-inner">
+  <div class="reveal">
+    <div class="section-tag" id="skillsTag">Proficiency</div>
+    <h2 class="section-title" id="skillsTitle">Core Competencies</h2>
+    <p class="section-sub" id="skillsSub">Years of hands-on experience across the full cloud engineering lifecycle.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-item reveal">
+      <div class="skill-header"><span class="skill-name">AWS Cloud Architecture</span><span class="skill-pct">92%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:92%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-1">
+      <div class="skill-header"><span class="skill-name">Kubernetes & Docker</span><span class="skill-pct">88%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:88%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-2">
+      <div class="skill-header"><span class="skill-name">Terraform IaC</span><span class="skill-pct">90%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:90%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-3">
+      <div class="skill-header"><span class="skill-name">Ansible Automation</span><span class="skill-pct">85%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:85%"></div></div>
+    </div>
+    <div class="skill-item reveal">
+      <div class="skill-header"><span class="skill-name">Linux Administration</span><span class="skill-pct">93%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:93%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-1">
+      <div class="skill-header"><span class="skill-name">DNS & DHCP Networking</span><span class="skill-pct">87%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:87%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-2">
+      <div class="skill-header"><span class="skill-name">Puppet & Foreman</span><span class="skill-pct">80%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:80%"></div></div>
+    </div>
+    <div class="skill-item reveal reveal-delay-3">
+      <div class="skill-header"><span class="skill-name">CI/CD & GitOps</span><span class="skill-pct">84%</span></div>
+      <div class="skill-track"><div class="skill-bar" style="--pct:84%"></div></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================
+     TECHNICAL NOTES
+     ============================================================ -->
+<section id="notes">
+  <div class="reveal">
+    <div class="section-tag" id="notesTag">Technical Notes</div>
+    <h2 class="section-title" id="notesTitle">Field Notes & Guides</h2>
+    <p class="section-sub" id="notesSub">Markdown-based technical guides from production environments. Real solutions to real problems.</p>
+  </div>
+
+  <div class="notes-grid">
+    <a class="note-card reveal" href="#">
+      <div class="note-num">01</div>
+      <div class="note-content">
+        <div class="note-title">Zero-downtime Kubernetes rolling updates on EKS</div>
+        <div class="note-meta">
+          <span class="note-date">Apr 2025</span>
+          <span class="note-tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+    <a class="note-card reveal reveal-delay-1" href="#">
+      <div class="note-num">02</div>
+      <div class="note-content">
+        <div class="note-title">Terraform state management with S3 + DynamoDB locking</div>
+        <div class="note-meta">
+          <span class="note-date">Mar 2025</span>
+          <span class="note-tag">IaC</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+    <a class="note-card reveal reveal-delay-2" href="#">
+      <div class="note-num">03</div>
+      <div class="note-content">
+        <div class="note-title">Kea DHCP vs ISC DHCP: A production comparison</div>
+        <div class="note-meta">
+          <span class="note-date">Feb 2025</span>
+          <span class="note-tag">Networking</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+    <a class="note-card reveal reveal-delay-3" href="#">
+      <div class="note-num">04</div>
+      <div class="note-content">
+        <div class="note-title">Ansible playbooks for multi-region AWS provisioning</div>
+        <div class="note-meta">
+          <span class="note-date">Jan 2025</span>
+          <span class="note-tag">Automation</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+    <a class="note-card reveal" href="#">
+      <div class="note-num">05</div>
+      <div class="note-content">
+        <div class="note-title">Foreman + Puppet for bare-metal provisioning at scale</div>
+        <div class="note-meta">
+          <span class="note-date">Dec 2023</span>
+          <span class="note-tag">DevOps</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+    <a class="note-card reveal reveal-delay-1" href="#">
+      <div class="note-num">06</div>
+      <div class="note-content">
+        <div class="note-title">Hardening Linux servers for Middle East enterprise compliance</div>
+        <div class="note-meta">
+          <span class="note-date">Nov 2023</span>
+          <span class="note-tag">Security</span>
+        </div>
+      </div>
+      <div class="note-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<div id="contact">
+<section class="contact-inner">
+  <div class="reveal">
+    <div class="section-tag" id="contactTag">Contact</div>
+    <h2 class="section-title" id="contactTitle">Let's Build Together</h2>
+    <p class="section-sub" id="contactSub">Available for enterprise cloud projects across UK, Middle East, and globally. Reach out for infrastructure consulting, architecture reviews, or full engagements.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card reveal">
+      <div class="contact-item">
+        <div class="ci-icon">✉️</div>
+        <div>
+          <div class="ci-label">Email</div>
+          <div class="ci-value">abc@gmail.com</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📍</div>
+        <div>
+          <div class="ci-label">Location</div>
+          <div class="ci-value">Chennai, India · Zoho</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">🌐</div>
+        <div>
+          <div class="ci-label">Serving</div>
+          <div class="ci-value">UK · Saudi Arabia · UAE · Global</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">⏰</div>
+        <div>
+          <div class="ci-label">Timezone</div>
+          <div class="ci-value">IST (UTC +5:30)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-stack-display reveal reveal-delay-1">
+      <div class="section-tag" style="margin-bottom: 20px;" id="deployTag">Deployment</div>
+      <div class="deploy-info">
+        <div>$ <span>hosting:</span> AWS S3 + CloudFront</div>
+        <div>$ <span>framework:</span> Next.js (Static Export)</div>
+        <div>$ <span>styling:</span> Tailwind CSS</div>
+        <div>$ <span>cdn:</span> CloudFront (Global Edge)</div>
+        <div>$ <span>iac:</span> Terraform</div>
+        <div>$ <span>ci/cd:</span> GitHub Actions</div>
+        <div>$ <span>regions:</span> ap-south-1 (primary)</div>
+        <div>$ <span>status:</span> <span style="color: #22c55e;">● online</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-name" id="footerName">Er. P. Ramnath</div>
+  <div class="footer-sub" id="footerSub">Cloud Engineer · Chennai · Zoho</div>
+  <div class="footer-links">
+    <a class="footer-link" href="#hero">Home</a>
+    <a class="footer-link" href="#experience">Experience</a>
+    <a class="footer-link" href="#stack">Stack</a>
+    <a class="footer-link" href="#notes">Notes</a>
+    <a class="footer-link" href="mailto:abc@gmail.com">Contact</a>
+  </div>
+  <div style="margin-top: 24px; font-size: 12px; opacity: 0.4;" id="footerCopy">
+    © 2025 Er. P. Ramnath · Built with Next.js · Hosted on AWS · All rights reserved.
+  </div>
+</footer>
+
+<!-- ============================================================
+     HACKER TERMINAL OVERLAY (Boot sequence)
+     ============================================================ -->
+<div id="hackerOverlay">
+  <div class="terminal-window">
+    <div class="terminal-bar">
+      <div class="t-dot t-dot-r"></div>
+      <div class="t-dot t-dot-y"></div>
+      <div class="t-dot t-dot-g"></div>
+      <div class="terminal-title">terminal.sh — bash</div>
+    </div>
+    <div class="terminal-body" id="terminalBody">
+      <div class="t-line"><span class="t-prompt">ramnath@cloud:~$</span> <span class="t-cmd">./terminal.sh</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ----------------------------------------------------------------
+   HACKER MODE
+   ---------------------------------------------------------------- */
+let hackerActive = false;
+let hackerTimer = null;
+let countdownInterval = null;
+let countdownSec = 15;
+
+const termLines = [
+  { delay: 300,  html: '<div class="t-line t-out">[  0.001] Initializing secure shell...</div>' },
+  { delay: 600,  html: '<div class="t-line t-out">[  0.032] Loading kernel modules...</div>' },
+  { delay: 900,  html: '<div class="t-line t-out">[  0.089] Mounting /dev/cloud → OK</div>' },
+  { delay: 1200, html: '<div class="t-line t-out">[  0.124] AWS credentials verified ✓</div>' },
+  { delay: 1500, html: '<div class="t-line t-out">[  0.211] kubectl cluster-info → online</div>' },
+  { delay: 1800, html: '<div class="t-line t-success">[  0.312] HACKER MODE ACTIVATED ██████████ 100%</div>' },
+];
+
+function toggleHacker() {
+  if (hackerActive) {
+    exitHacker();
+  } else {
+    enterHacker();
+  }
+}
+
+function enterHacker() {
+  // Show terminal overlay
+  const overlay = document.getElementById('hackerOverlay');
+  const body = document.getElementById('terminalBody');
+  body.innerHTML = '<div class="t-line"><span class="t-prompt">ramnath@cloud:~$</span> <span class="t-cmd">./terminal.sh</span></div>';
+  overlay.classList.add('active');
+
+  // Type out lines
+  termLines.forEach(({ delay, html }) => {
+    setTimeout(() => {
+      body.innerHTML += html;
+      body.scrollTop = body.scrollHeight;
+    }, delay);
+  });
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    document.body.classList.add('hacker');
+    hackerActive = true;
+    updateHackerText();
+    startCountdown();
+    document.getElementById('hackerBtn').querySelector('#hackerBtnText').textContent = '✕ exit terminal';
+    document.getElementById('navLogo').textContent = '> ramnath.sh';
+  }, 2200);
+}
+
+function exitHacker() {
+  document.body.classList.remove('hacker');
+  hackerActive = false;
+  clearTimeout(hackerTimer);
+  clearInterval(countdownInterval);
+  document.getElementById('countdownBar').style.display = 'none';
+  document.getElementById('countdownLabel').style.display = 'none';
+  document.getElementById('hackerBtn').querySelector('#hackerBtnText').textContent = '>_ run terminal.sh';
+  document.getElementById('navLogo').textContent = 'Er. P. Ramnath';
+  restoreText();
+}
+
+function startCountdown() {
+  countdownSec = 15;
+  const bar = document.getElementById('countdownBar');
+  const fill = document.getElementById('countdownFill');
+  const label = document.getElementById('countdownLabel');
+  const num = document.getElementById('countdownNum');
+
+  bar.style.display = 'block';
+  label.style.display = 'block';
+  num.textContent = '15';
+  fill.style.transition = 'none';
+  fill.style.width = '100%';
+
+  setTimeout(() => {
+    fill.style.transition = 'width 15s linear';
+    fill.style.width = '0%';
+  }, 50);
+
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(() => {
+    countdownSec--;
+    num.textContent = countdownSec;
+    if (countdownSec <= 0) {
+      clearInterval(countdownInterval);
+      exitHacker();
+    }
+  }, 1000);
+
+  clearTimeout(hackerTimer);
+  hackerTimer = setTimeout(exitHacker, 15000);
+}
+
+/* Hacker text transforms */
+const textMap = {
+  heroEyebrow: '$ whoami → Cloud Engineer · Chennai · Zoho',
+  heroTitle: '> Cloud Infrastructure Engineer',
+  heroTagline: '// "Booting my Career"',
+  heroBio: '// Enterprise Cloud Engineer. Multi-cloud. Container orchestration. IaC. Global delivery.',
+  cta1Text: 'mail --send',
+  cta2Text: 'cat experience.log',
+  stat1: '3+',
+  stat2: '0x03',
+  stat3: '0x0C',
+  stat4: '99.9%',
+  expTag: '$ cat experience.log',
+  expTitle: 'Work History',
+  expSub: '// Enterprise cloud solutions · UK · Middle East',
+  role1: 'cloud_engineer.sh',
+  period1: '// Mar 2025 – Present',
+  desc1: '# Building cloud-native infra for KSA/UAE enterprise clients. K8s. Terraform. GitOps.',
+  role2: 'cloud_engineer.sh',
+  period2: '// Aug 2022 – Dec 2023',
+  desc2: '# Enterprise cloud migrations. UK org. DNS. DHCP. Puppet. Foreman.',
+  mapTag: '$ traceroute --global',
+  mapTitle: 'Network Topology',
+  stackTag: '$ ls /usr/bin/tools',
+  stackTitle: 'Installed Packages',
+  stackSub: '// Production-tested toolchain for enterprise infrastructure.',
+  skillsTag: '$ htop --skills',
+  skillsTitle: 'CPU Usage by Skill',
+  skillsSub: '// Proficiency measured in production incidents survived.',
+  notesTag: '$ ls -la /var/log/notes/',
+  notesTitle: 'stdout',
+  notesSub: '// Markdown field notes from production.',
+  contactTag: '$ ssh connect',
+  contactTitle: 'Establish Connection',
+  contactSub: '// Open for enterprise engagements. Ping me.',
+  deployTag: '$ systemctl status deploy',
+  footerName: '> ramnath@cloud:~',
+  footerSub: '// Cloud Engineer · Chennai · Zoho',
+  footerCopy: '# © 2025 Er. P. Ramnath · MIT License · AWS Hosted',
+};
+
+const originalText = {};
+
+function updateHackerText() {
+  Object.entries(textMap).forEach(([id, hackerVal]) => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (!originalText[id]) originalText[id] = el.textContent;
+      el.textContent = hackerVal;
+    }
+  });
+}
+
+function restoreText() {
+  Object.entries(originalText).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = val;
+  });
+}
+
+/* ----------------------------------------------------------------
+   SCROLL REVEAL
+   ---------------------------------------------------------------- */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Animate skill bars
+      if (entry.target.classList.contains('skill-item')) {
+        entry.target.classList.add('animate');
+      }
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ----------------------------------------------------------------
+   NAVBAR SCROLL EFFECT
+   ---------------------------------------------------------------- */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 20) {
+    nav.style.boxShadow = '0 2px 24px rgba(0,0,0,0.08)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+
+/* ----------------------------------------------------------------
+   HACKER MODE: Map SVG color swap
+   ---------------------------------------------------------------- */
+const mapObserver = new MutationObserver(() => {
+  const isHacker = document.body.classList.contains('hacker');
+  document.querySelectorAll('.map-dot').forEach(dot => {
+    dot.setAttribute('fill', isHacker ? '#00ff41' : '#0067ff');
+  });
+  document.querySelectorAll('.map-pulse').forEach(dot => {
+    dot.setAttribute('fill', isHacker ? 'rgba(0,255,65,0.12)' : 'rgba(0,103,255,0.1)');
+  });
+  document.querySelectorAll('[stroke="#0067ff"]').forEach(el => {
+    el.setAttribute('stroke', isHacker ? '#00ff41' : '#0067ff');
+  });
+  document.querySelectorAll('text[fill="#0047c8"]').forEach(el => {
+    el.setAttribute('fill', isHacker ? '#00cc35' : '#0047c8');
+  });
+});
+mapObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+/* ----------------------------------------------------------------
+   COUNTER ANIMATION
+   ---------------------------------------------------------------- */
+function animateCounter(el, target, suffix = '') {
+  const duration = 1800;
+  const start = performance.now();
+  const isFloat = target.toString().includes('.');
+  const num = parseFloat(target);
+  const step = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = isFloat ? (num * ease).toFixed(1) : Math.floor(num * ease);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(document.getElementById('stat2'), 3, '');
+      animateCounter(document.getElementById('stat3'), 12, '+');
+      statsObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+const statsEl = document.querySelector('.hero-stats');
+if (statsEl) statsObserver.observe(statsEl);
+</script>
+
+</body>
+</html>
